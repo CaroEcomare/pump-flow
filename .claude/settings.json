@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(gh auth *)",
+      "Bash(git ls-remote *)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(git init *)"
+    ]
+  }
+}
