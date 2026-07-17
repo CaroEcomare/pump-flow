@@ -4,20 +4,6 @@
 <title>Pump&Flow · Más que solo hipopresivos</title>
 <link rel="stylesheet" href="pump-flow-design/diseño-marca-pump-flow/styles.css">
 <style>
-  body{margin:0;background:var(--surface-page);color:var(--text-body);font:var(--text-body)}
-  a{color:var(--pf-morado);text-decoration:none}
-  a:hover{color:var(--pf-lavanda-hover)}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
-  .btn{font:var(--text-button);border:none;border-radius:var(--radius-pill);cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:14px 30px;min-height:48px;transition:background var(--transition-fast),transform var(--transition-fast)}
-  .btn:active{transform:scale(.98)}
-  .btn-primary{background:var(--pf-lavanda);color:#fff}
-  .btn-primary:hover{background:var(--pf-lavanda-hover)}
-  .btn-outline{background:transparent;color:var(--pf-morado);box-shadow:inset 0 0 0 2px var(--pf-lavanda)}
-  .btn-outline:hover{background:var(--pf-lila-fondo)}
-  .btn-white{background:#fff;color:var(--pf-morado)}
-  .btn-white:hover{background:var(--pf-lila)}
-  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-  nav .links{display:flex;gap:28px;font:var(--text-body-strong);font-size:15px}
   .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding-top:56px;padding-bottom:72px}
   .hero h1{font:var(--text-display-xl);color:var(--text-title);margin:0 0 16px}
   .hero p{font:var(--text-body-lg);max-width:440px;margin:0 0 28px}
@@ -45,14 +31,29 @@
   .form label{display:grid;gap:6px;font:var(--text-body-strong);font-size:14px;color:var(--text-title)}
   .form input,.form select{font:var(--text-body);color:var(--text-body);padding:12px 18px;border-radius:var(--radius-pill);border:2px solid var(--border-soft);outline:none;min-height:48px;box-sizing:border-box;background:#fff}
   .form input:focus,.form select:focus{border-color:var(--focus-ring)}
-  footer{background:var(--pf-morado);border-top:1px solid rgba(255,255,255,.15);padding:32px 0;color:var(--pf-lila)}
-  footer .inner{display:flex;justify-content:space-between;align-items:center;font:var(--text-small)}
+  .cta-row{display:flex;gap:12px}
+  @media (max-width: 679px) {
+    .hero{grid-template-columns:1fr;gap:28px;padding-top:32px;padding-bottom:48px;text-align:center}
+    .hero>div:first-child{order:2}
+    .hero .foto{order:1;min-height:240px}
+    .hero p{margin-left:auto;margin-right:auto}
+    .cta-row{flex-direction:column}
+    .bloque-lavanda{padding:48px 0}
+    .bub:nth-child(even),.bub:nth-child(odd){margin-left:0;margin-right:0}
+    .clases{padding-top:48px;padding-bottom:48px}
+    .grid3{grid-template-columns:1fr}
+    .reserva{padding:48px 0}
+    .reserva .inner{grid-template-columns:1fr;gap:28px;text-align:center}
+    .form{min-height:220px}
+  }
 </style></head><body>
 <header class="wrap">
   <nav>
     <a href="index.html"><img src="pump-flow-design/diseño-marca-pump-flow/assets/logo-morado.png" alt="Pump&Flow" style="height:64px"></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Abrir menú">☰</label>
     <div class="links"><a href="clases.html">Clases</a><a href="curso.html">Curso en línea</a><a href="personales.html">Clases personales</a></div>
-    <a class="btn btn-primary" href="https://wa.me/524431331146?text=Hola%20Caro%2C%20quiero%20agendar%20mi%20clase%20%F0%9F%A4%8D" target="_blank" style="text-decoration:none">Reserva tu clase ✨</a>
+    <a class="btn btn-primary" href="https://wa.me/524431331146?text=Hola%20Caro%2C%20quiero%20agendar%20mi%20clase%20%F0%9F%A4%8D" target="_blank">Reserva tu clase ✨</a>
   </nav>
 </header>
 
@@ -61,9 +62,9 @@
     <span class="badge" style="margin-bottom:14px;letter-spacing:var(--letter-spacing-caps);text-transform:uppercase">Más que solo hipopresivos</span>
     <h1>Conecta con tu cuerpo, a tu ritmo 🤍</h1>
     <p>Clases de hipopresivos grupales y personales, presenciales y en línea. Para trabajar tu abdomen, cuidar tu suelo pélvico y regalarte un momento de calma.</p>
-    <div style="display:flex;gap:12px">
-      <a class="btn btn-primary" href="https://wa.me/524431331146?text=Hola%20Caro%2C%20quiero%20agendar%20mi%20clase%20de%20introducci%C3%B3n%20%F0%9F%A4%8D" target="_blank" style="text-decoration:none">Agenda tu primera clase</a>
-      <a class="btn btn-outline" href="curso.html" style="text-decoration:none">Conoce los cursos</a>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/524431331146?text=Hola%20Caro%2C%20quiero%20agendar%20mi%20clase%20de%20introducci%C3%B3n%20%F0%9F%A4%8D" target="_blank">Agenda tu primera clase</a>
+      <a class="btn btn-outline" href="curso.html">Conoce los cursos</a>
     </div>
   </div>
   <div class="foto" style="background:url('../../assets/hero-pumpflow.png') center/cover no-repeat"></div>

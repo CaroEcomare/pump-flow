@@ -4,16 +4,6 @@
 <link rel="stylesheet" href="pump-flow-design/diseño-marca-pump-flow/styles.css">
 <script src="pump-flow-design/diseño-marca-pump-flow/ui_kits/web/image-slot.js"></script>
 <style>
-  body{margin:0;background:var(--surface-page);color:var(--text-body);font:var(--text-body)}
-  a{color:var(--pf-morado);text-decoration:none}
-  a:hover{color:var(--pf-lavanda-hover)}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
-  .btn{font:var(--text-button);border:none;border-radius:var(--radius-pill);cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:14px 30px;min-height:48px;transition:background var(--transition-fast),transform var(--transition-fast);text-decoration:none}
-  .btn:active{transform:scale(.98)}
-  .btn-primary{background:var(--pf-lavanda);color:#fff}
-  .btn-primary:hover{background:var(--pf-lavanda-hover);color:#fff}
-  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-  nav .links{display:flex;gap:28px;font:var(--text-body-strong);font-size:15px}
   .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding-top:56px;padding-bottom:64px}
   .hero h1{font:var(--text-display);color:var(--text-title);margin:0 0 16px}
   .hero p{font:var(--text-body-lg);max-width:460px;margin:0 0 28px}
@@ -27,12 +17,18 @@
   .mod p{font:var(--text-small);margin:0}
   .cta{padding:64px 0;text-align:center}
   .cta h2{font:var(--text-h1);color:var(--text-title);margin:0 0 12px}
-  footer{background:var(--pf-morado);border-top:1px solid rgba(255,255,255,.15);padding:32px 0;color:var(--pf-lila)}
-  footer .inner{display:flex;justify-content:space-between;align-items:center;font:var(--text-small)}
+  @media (max-width: 679px) {
+    .hero{grid-template-columns:1fr;gap:24px;padding-top:32px;padding-bottom:40px;text-align:center}
+    .contenido{padding:40px 0}
+    .modulos{grid-template-columns:1fr}
+    .cta{padding:40px 0}
+  }
 </style></head><body>
 <header class="wrap">
   <nav>
     <a href="index.html"><img src="pump-flow-design/diseño-marca-pump-flow/assets/logo-morado.png" alt="Pump&Flow" style="height:64px"></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Abrir menú">☰</label>
     <div class="links"><a href="clases.html">Clases</a><a href="curso.html">Curso en línea</a><a href="personales.html">Clases personales</a></div>
     <a class="btn btn-primary" href="https://wa.me/524431331146?text=Hola%20Caro%2C%20quiero%20agendar%20mi%20clase%20%F0%9F%A4%8D" target="_blank">Reserva tu clase ✨</a>
   </nav>
