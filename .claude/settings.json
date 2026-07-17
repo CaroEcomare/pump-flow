@@ -12,7 +12,11 @@
       "Bash(pkill -f \"http.server 8791\")",
       "Bash(python3 -m http.server 8791)",
       "Bash(python3 -)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(mkdir -p /Users/caroaguilar/CODE/pump-flow/docs/superpowers/specs)"
+    ],
+    "additionalDirectories": [
+      "/Users/caroaguilar/CODE/pump-flow/docs/superpowers"
     ]
   }
 }
